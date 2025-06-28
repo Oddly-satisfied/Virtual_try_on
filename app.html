@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Try-On</title>
-    
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
 </head>
 <body>
-    
+    <div id="container">
+        <canvas id = "arCanvas"></canvas>
+        <div class="loading" id = "loading">Models...</div>
+        <div id="garmentSelector">
+            <button onclick="changeGarment('shirt')">T-Shirt</button>
+            <button onclick="changeGarment('dress')">Dress</button>
+            <button onclick="changeGarment('jacket')">Jacket</button>
+            <button onclick="changeGarment('bottom')">bottom</button>
+            <button onclick="changeGarment('skirt')">Skirt</button>
+        </div>
+    </div>
+
+    <!--Js Libraries-->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@1.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-segmentation@1.0.0"></script>
+
+
+
 </body>
 </html>
